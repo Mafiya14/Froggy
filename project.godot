@@ -10,7 +10,7 @@ config_version=4
 
 [application]
 
-config/name="Paimon"
+config/name="Froggy"
 run/main_scene="res://Scenes/Level_test.tscn"
 
 [gui]

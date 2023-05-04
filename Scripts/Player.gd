@@ -11,13 +11,13 @@ var dJumpTime = 1
 
 func _physics_process(delta):
 	Motion.y += Gravity
-	
 	Motion = move_and_slide(Motion, UP)
 	
 	if Input.is_action_pressed("left"):
 		Motion.x = -Speed
 		$AnimatedSprite.flip_h = true
 		$AnimatedSprite.play("run")
+		
 	elif Input.is_action_pressed("right"):
 		Motion.x = Speed
 		$AnimatedSprite.flip_h = false
@@ -28,8 +28,6 @@ func _physics_process(delta):
 		
 	if is_on_floor() and jump_count != 0:
 		jump_count = 0
-		
-		
 		
 	if !is_on_floor():
 		if Motion.y < 0:
@@ -46,11 +44,9 @@ func _physics_process(delta):
 					$AnimatedSprite.play("doubleJump")
 					dJumpTime -= delta
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+	if Motion.x != 0 and is_on_floor():
+		if !$AudioStreamPlayer2D.playing:
+				$AudioStreamPlayer2D.play()
+	else:
+		$AudioStreamPlayer2D.stop()
+	

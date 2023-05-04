@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/player_walk.mp3-9018a4ee8c0b9d689a6172dd9a694ed0.mp3str"
+
+[deps]
+
+source_file="res://Sprites/Sounds/player_walk.mp3"
+dest_files=[ "res://.import/player_walk.mp3-9018a4ee8c0b9d689a6172dd9a694ed0.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

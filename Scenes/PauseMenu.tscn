@@ -48,7 +48,7 @@ margin_right = 106.0
 margin_bottom = 76.0
 text = "Levels"
 
-[node name="QuintBtn" type="Button" parent="CenterContainer/VBoxContainer"]
+[node name="QuitBtn" type="Button" parent="CenterContainer/VBoxContainer"]
 margin_top = 80.0
 margin_right = 106.0
 margin_bottom = 100.0
@@ -56,4 +56,4 @@ text = "Quit"
 
 [connection signal="pressed" from="CenterContainer/VBoxContainer/ResumeBtn" to="." method="_on_ResumeBtn_pressed"]
 [connection signal="pressed" from="CenterContainer/VBoxContainer/LevelsBtn" to="." method="_on_LevelsBtn_pressed"]
-[connection signal="pressed" from="CenterContainer/VBoxContainer/QuintBtn" to="." method="_on_QuintBtn_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/QuitBtn" to="." method="_on_QuitBtn_pressed"]
